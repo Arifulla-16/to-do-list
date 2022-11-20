@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List!</title>
+</head>
+<body>
+    <span class="container">
+        <span class="daycon">
+            <span class="day">
+                <a><%= today %> <br></a>
+            </span>
+        </span>
+        
+        <span class="listcon">
+            <form action="/" method="post" class="list">
+                <% for(var i=0;i<listItems.length;i++){ %>
+                    <span class="itemcon">
+                        <input type="hidden" name="tick" value="0">
+                        <input type="checkbox" name="tick" value="1" class="check" <%=chk[i]%>>
+                        <a class="content"><%=listItems[i]%></a><br>
+                    </span>
+                <%}%>
+                <span class="itemcon">
+                    <input type="text" name="text" id="text" placeholder="New Item">&nbsp&nbsp
+                    <input type="submit" value="Add" id="adder" >
+                </span>
+            </form>
+        </span>
+    
+    </span>
+    
+    
+</body>
+</html>
