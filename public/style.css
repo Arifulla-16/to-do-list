@@ -99,7 +99,6 @@ body{
     border: 0px;
     /* border-style: none; */
     width: 50%;
-    text-align: center;
 }
 
 .check:checked + .content{

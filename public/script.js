@@ -11,3 +11,7 @@ $("#text").focusout(function (e) {
     $("#text").css("border-bottom", "0px");
     // $("#text").css("transition","border-bottom 0.2s ease-in");
 });
+
+$(".check").change(function (e) { 
+    $("#adder").click();
+});

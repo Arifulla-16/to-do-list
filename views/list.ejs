@@ -22,11 +22,11 @@
             <form action="/" method="post" class="list">
                 <% for(var i=0;i<listItems.length;i++){ %>
                     <span class="itemcon">
-                        <input type="hidden" name="tick" value="0">
-                        <input type="checkbox" name="tick" value="1" class="check" <%=chk[i]%>>
-                        <a class="content"><%=listItems[i]%></a><br>
+                        <input type="checkbox" name="tick" value="<%=listItems[i]._id%>" class="check">
+                        <a class="content"><%=listItems[i].name%></a><br>
                     </span>
                 <%}%>
+                <input type="hidden" name="list" value="<%= today %>">
                 <span class="itemcon">
                     <input type="text" name="text" id="text" placeholder="New Item">&nbsp&nbsp
                     <input type="submit" value="+" id="adder" >
